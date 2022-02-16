@@ -9,6 +9,8 @@
 <body>
     <?php
     echo 'Hello World';
+
+    echo 'ouaich gros'
     ?>
 </body>
 </html>
