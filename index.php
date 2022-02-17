@@ -12,9 +12,10 @@
 <?php
 
 require('vendor/autoload.php');
-
+if($_SERVER['HTTP_HOST'] != "coffee-kercode-ren.herokuapp.com") {
 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
+}
 
 function dbaccess() {
   $dbConnection = "mysql:dbname=". $_ENV['DB_NAME'] ."; host=". $_ENV['DB_HOST'] .":". $_ENV['DB_PORT'] ."; charset=utf8";
@@ -33,7 +34,7 @@ $req = $db->query('SELECT name FROM waiter')->fetchAll();
 ?>
 
 <body>
-    
+
     <h1>Liste des Serveurs</h1>
     <?php 
     foreach ($req as $dbreq) {
