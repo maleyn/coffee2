@@ -30,6 +30,7 @@ function dbaccess() {
 $db = dbaccess();
 
 $req = $db->query('SELECT name FROM waiter')->fetchAll();
+$req2 = $db->query('SELECT name FROM edible')->fetchAll();
 
 ?>
 
@@ -41,6 +42,12 @@ $req = $db->query('SELECT name FROM waiter')->fetchAll();
         echo $dbreq['name'] . "<br>";
       }
       ?>
-
+    <h1>Liste des Cafés</h1>
+    <?php 
+        foreach ($req2 as $dbreq) {
+        echo $dbreq['name'] . "<br>";
+      }
+      ?>
+    
 </body>
 </html>
