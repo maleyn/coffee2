@@ -12,10 +12,10 @@
 <?php require_once "functions/bdd.php" ?>
 <?php require_once "functions/query.php" ?>
 <?php $bdd = bdd(); ?>
-<!-- <?php $waiters = waiters() ?> -->
+<?php $waiters = waiters() ?>
 
 <body>
-    <!-- <?php
+    <?php
     // PDO -> php data object
     echo 'Liste des serveurs :';
     echo "<br><br>";
@@ -28,6 +28,6 @@
         echo "<br>";
 
     }
-    ?> -->
+    ?>
 </body>
 </html>
